@@ -1,3 +1,21 @@
+*{
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+
+}
+@keyframes animate-to-bottom {
+    0% {
+        top: 1px;
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    100% {
+        top: 40px;
+        opacity: 0;
+    }
+}
 .nav-bar {
     position: fixed;
     top: 0px;
@@ -7,7 +25,8 @@
     width: 100%;
     height: 100px; /* Adjust the height to accommodate the logo */
     display: flex;
-    
+    overflow: hidden;
+    align-items: center;
 }
 .nav-bar img{
     margin:15px;   
@@ -25,15 +44,21 @@
 .list-item{
     margin:10px;
 }
+.list-item:hover {
+    color:rgb(150, 118, 85);
+}
 
 
 .intro{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
     position: relative;
     top:0px;
-    height:750px;
+    height:100vh;
     width:100%;
     right:0%;
-
+    
 
     background-image: url('images/drew-coffman-1872.jpg');
     /* Set background size to cover the entire body */
@@ -48,20 +73,23 @@
     position:absolute;
     top:20%;
     font-family:Arial, Helvetica, sans-serif;
+    overflow: hidden;
 }
 .welcome{
     text-align: center;
     color:rgba(255, 255, 255, 0.5);
+    font-size: 24px;
     
 }
 h1{
     text-align: center;
     color:aliceblue;
-    font-size: 50px;
+    font-size: 80px;
 }
 .intro p{
     text-align: center;
     color:rgba(255, 255, 255, 0.5);
+    font-size: 24px;
 }
 .buttons{
     text-align: center;
@@ -70,39 +98,70 @@ h1{
     border:none;
     background-color: rgb(150, 118, 85);
     color:aliceblue;
-    padding: 10px 30px; 
+    padding: 20px 30px; 
     border-radius: 25px;
 
+}
+.Learn:hover {
+    background-color: aliceblue;
+    color:rgb(150, 118, 85);
 }
 .Contact{
     border:none;
     background-color: rgb(150, 118, 85);
     color:aliceblue;
-    padding: 10px 30px; 
+    padding: 20px 30px;  
     border-radius: 25px;
 }
+.Contact:hover {
+    background-color: aliceblue;
+    color:rgb(150, 118, 85);
+}
+.scroll-parent {
+    width: 30px;
+    height: 50px;
+    position: absolute;
+    border-radius: 5rem;
+    border: 1px solid aliceblue;
+    cursor: pointer;
+    bottom: 5%;
+    overflow: hidden;
+}
+.scroll-botton{
+    position: absolute;
+    background-color: white;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 8px;
+    width: 8px;
+    top: 1px;
+    border-radius: 50%;
+    animation-name: animate-to-bottom;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
 
-
-.WhoWeAre{
+#WhoWeAre{
     margin:10%;
     width:80%;
     display: flex;
 
 }
-.WhoWeAre h2{
+#WhoWeAre h2{
     margin-top: 16%;
     font-size: 40px;
     color:rgb(48, 48, 48);
 }
-.WhoWeAre p{
+#WhoWeAre p{
     color:rgb(102, 102, 102);
     text-align: left;
 }
-.WhoWeAre ul{
+#WhoWeAre ul{
     
     padding-left: 0; /* Remove default padding */
 }
-.WhoWeAre li{
+#WhoWeAre li{
     margin:8%;
     color:rgb(102, 102, 102);
 }
